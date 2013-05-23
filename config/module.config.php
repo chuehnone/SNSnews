@@ -1,6 +1,6 @@
 <?php
 return array(
-	'contrellers' => array(
+	'controllers' => array(
 		'invokables' => array(
 			'SNSnews\Controller\SNSnews' => 'SNSnews\Controller\SNSnewsController',
 		),
