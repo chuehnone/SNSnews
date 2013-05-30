@@ -1,0 +1,12 @@
+<h1>SNS news</h1>
+<p>
+<?php 
+    echo '<ul>';
+    foreach($this->FB['likes']['data'] as $list){
+        echo '<li>';
+        echo $list['category'],' - ',$list['name'],' - ',$list['created_time'];
+        echo '</li>';
+    }
+    echo '</ul>';
+?>
+</p>

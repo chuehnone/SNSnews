@@ -1,20 +1,21 @@
 <?php
 return array(
-	'controllers' => array(
-		'invokables' => array(
-			'SNSnews\Controller\SNSnews' => 'SNSnews\Controller\SNSnewsController',
-		),
-	),
-	'router' => array(
+    'controllers' => array(
+        'invokables' => array(
+            'SNSnews\Controller\SNSnews' => 'SNSnews\Controller\SNSnewsController',
+        ),
+    ),
+
+    'router' => array(
         'routes' => array(
-            'SNSnews' => array(
+            'snsnews' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/news[/][:action][/:id]',
-                    'constraints' => array(
+                    'route'    => '/snsnews/',
+                    /*'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                         'id'     => '[0-9]+',
-                    ),
+                    ),*/
                     'defaults' => array(
                         'controller' => 'SNSnews\Controller\SNSnews',
                         'action'     => 'index',
@@ -23,9 +24,10 @@ return array(
             ),
         ),
     ),
-	'view_manager' => array(
-		'template_path_stack' => array(
-			'SNSnews' => __DIR__ . '/../view',
-		),
-	),
+
+    'view_manager' => array(
+        'template_path_stack' => array(
+            'snsnews' => __DIR__ . '/../view',
+        ),
+    ),
 );
