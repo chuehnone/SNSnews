@@ -11,11 +11,11 @@ return array(
             'snsnews' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/snsnews/',
-                    /*'constraints' => array(
+                    'route'    => '/snsnews/[:action]',
+                    'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id'     => '[0-9]+',
-                    ),*/
+                        //'id'     => '[0-9]+',
+                    ),
                     'defaults' => array(
                         'controller' => 'SNSnews\Controller\SNSnews',
                         'action'     => 'index',

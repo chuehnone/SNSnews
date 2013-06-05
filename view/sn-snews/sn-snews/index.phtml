@@ -1,12 +1,9 @@
 <h1>SNS news</h1>
 <p>
 <?php 
-    echo '<ul>';
-    foreach($this->FB['likes']['data'] as $list){
-        echo '<li>';
-        echo $list['category'],' - ',$list['name'],' - ',$list['created_time'];
-        echo '</li>';
-    }
-    echo '</ul>';
+    var_dump($this->FB);
+    $url = $this->FB['url'];
+    $url_name = $this->FB['url_name'];
 ?>
 </p>
+<p><a href="<?php echo $url; ?>"><?php echo $url_name; ?></a></p>

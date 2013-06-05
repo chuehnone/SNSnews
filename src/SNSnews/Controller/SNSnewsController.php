@@ -7,14 +7,13 @@ use SNSnews\Model\SNSnews;
 
 class SNSnewsController extends AbstractActionController{
     public function indexAction(){
-        /*$test = get_included_files();
-        foreach ($test as $value) {
-            echo $value,"<br>";
-        }*/
-
         $snsnews = new SNSnews;
-        $fb_info = $snsnews->showFB();
-
+        $fb_info = $snsnews->getFbSelfLikeInfo();
         return new ViewModel(array('FB' => $fb_info));
+    }
+
+    public function logoutAction(){
+        SNSnews::setLogoutFlag(true);
+        return $this->redirect()->toRoute('snsnews');
     }
 }
